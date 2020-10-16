@@ -149,7 +149,7 @@ def centrate(ts_a, ts_b, d = lambda x,y: abs(x-y)):
 
 
 
-def k_means_clust(data, num_clust, num_iter):
+def k_clust(data, num_clust, num_iter):
     centroids = random.sample(data,num_clust)
     out = open('train_k-means.txt', 'w')
     counter = 0
@@ -193,5 +193,5 @@ def k_means_clust(data, num_clust, num_iter):
             out.write(repr(i[0]) + repr(i[1]) + '\n')
     return centroids
 
-centroids=k_means_clust(data,1,10)
+centroids=k_clust(data,1,10)
 
